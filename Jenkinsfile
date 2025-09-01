@@ -27,7 +27,7 @@ pipeline {
                     // Stop and remove old container if running
                     sh """
                     docker rm -f ${CONTAINER_NAME} || true
-                    docker run -d --name ${CONTAINER_NAME} -p 80:80 ${IMAGE_NAME}:latest
+                    docker run -d --name ${CONTAINER_NAME} -p 8081:80 ${IMAGE_NAME}:latest
                     """
                 }
             }
